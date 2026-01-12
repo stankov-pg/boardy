@@ -1,0 +1,42 @@
+// ==========================================================================
+// Confirmation modal
+// ==========================================================================
+
+.confirmation-modal {
+    --confirmation-modal-content-width: 50rem;
+    --confirmation-modal-content-padding: 2rem;
+    --confirmation-modal-content-border-radius: 1.6rem;
+    --confirmation-modal-content-background: var(--c-white);
+    --confirmation-modal-content-border: 0px 0px 0px 1px rgba(0,0,0,0.3);
+    --confirmation-modal-backdrop-background: rgba(0, 0, 0, .3);
+    
+    width: 100vw;
+    height: 100vh;
+    
+    &:before {
+        background-color: var(--confirmation-modal-backdrop-background);
+        
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Confirmation modal / Content
+// ==========================================================================
+
+.confirmation-modal__content {
+    max-width: var(--confirmation-modal-content-width);
+    padding: var(--confirmation-modal-content-padding);
+    border-radius: var(--confirmation-modal-content-border-radius);
+    background-color: var(--confirmation-modal-content-background);
+    box-shadow: var(--confirmation-modal-content-border);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

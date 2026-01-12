@@ -1,0 +1,94 @@
+// ==========================================================================
+// Button
+// ==========================================================================
+
+.button {
+    --button-border-radius: .6rem;
+    --button-padding: .4rem .8rem;
+    --button-background: unset;
+    --button-background-hover: unset;
+    --button-color: unset;
+    --button-color-hover: unset;
+    --button-border-color: unset;
+    --button-border-color-hover: unset;
+    --button-height: 26px;
+    --button-width: unset;
+    --button-box-shadow: inset 0px 0px 0px 1px var(--button-border-color);
+    --button-box-shadow-hover: inset 0px 0px 0px 1px var(--button-border-color-hover);
+
+    // Variant Primary
+    --button-variant-primary-background: var(--c-primary);
+    --button-variant-primary-background-hover: var(--c-grey-2);
+    --button-variant-primary-color: var(--c-white);
+    --button-variant-primary-color-hover: var(--c-primary);
+    --button-variant-primary-border-color: var(--c-primary);
+    --button-variant-primary-border-color-hover: var(--c-grey-2);
+
+    // Variant Plain
+    --button-variant-plain-padding: 0 .6rem;
+    --button-variant-plain-background: transparent;
+    --button-variant-plain-background-hover: var(--c-grey-6);
+    --button-variant-plain-color: var(--c-grey-7);
+    --button-variant-plain-color-hover: var(--c-primary);
+    --button-variant-plain-border-color: transparent;
+    --button-variant-plain-border-color-hover: var(--c-grey-6);
+
+    // Variant Danger
+    --button-variant-danger-background-hover: var(--c-danger);
+    --button-variant-danger-color-hover: var(--c-white);
+    --button-variant-danger-border-color-hover: var(--c-danger);
+
+    border-radius: var(--button-border-radius);
+    padding: var(--button-padding);
+    background: var(--button-background);
+    color: var(--button-color);
+    box-shadow: var(--button-box-shadow);
+    width: var(--button-width);
+    height: var(--button-height);
+
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    line-height: 1;
+
+    &:hover {
+        --button-background: var(--button-background-hover);
+        --button-color: var(--button-color-hover);
+        --button-box-shadow: var(--button-box-shadow-hover);
+    }
+
+    &--variant-primary {
+        --button-background: var(--button-variant-primary-background);
+        --button-background-hover: var(--button-variant-primary-background-hover);
+        --button-color: var(--button-variant-primary-color);
+        --button-color-hover: var(--button-variant-primary-color-hover);
+        --button-border-color: var(--button-variant-primary-border-color);
+        --button-border-color-hover: var(--button-variant-primary-border-color-hover);
+    }
+
+    &--variant-plain {
+        --button-padding: var(--button-variant-plain-padding);
+        --button-background: var(--button-variant-plain-background);
+        --button-background-hover: var(--button-variant-plain-background-hover);
+        --button-color: var(--button-variant-plain-color);
+        --button-color-hover: var(--button-variant-plain-color-hover);
+        --button-border-color: var(--button-variant-plain-border-color);
+        --button-border-color-hover: var(--button-variant-plain-border-color-hover);
+    }
+
+    &--variant-danger {
+        --button-background-hover: var(--button-variant-danger-background-hover);
+        --button-color-hover: var(--button-variant-danger-color-hover);
+        --button-border-color-hover: var(--button-variant-danger-border-color-hover);
+    }
+}
+
+// Button / Text
+// ==========================================================================
+
+.button__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+}

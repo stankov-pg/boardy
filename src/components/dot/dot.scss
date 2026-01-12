@@ -1,0 +1,15 @@
+// ==========================================================================
+// Dot
+// ==========================================================================
+
+.dot {
+    --dot-color: unset;
+    
+    background: var(--dot-color);
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, .4);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 0.2rem;
+    flex: none;
+}

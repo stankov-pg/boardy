@@ -1,0 +1,67 @@
+// ==========================================================================
+// Icon Button
+// ==========================================================================
+
+.icon-button {
+    --icon-button-size: 24px;
+    --icon-button-color: unset;
+    --icon-button-color-hover: unset;
+    --icon-button-background-color: unset;
+    --icon-button-background-color-hover: unset;
+    --icon-button-border-color: currentColor;
+    --icon-button-border-radius: .6rem;
+    --icon-button-box-shadow: unset;
+    
+    // Variant Primary
+    --icon-button-variant-primary-color: var(--c-primary);
+    --icon-button-variant-primary-color-hover: var(--c-grey);
+    --icon-button-variant-primary-background-color: var(--c-grey);
+    --icon-button-variant-primary-background-color-hover: var(--c-primary);
+    --icon-button-variant-primary-box-shadow: var(--container-box-shadow);
+    
+    // Variant Plain
+    --icon-button-variant-plain-color: var(--c-grey-7);
+    --icon-button-variant-plain-color-hover: var(--c-primary);
+    --icon-button-variant-plain-background-color: transparent;
+    --icon-button-variant-plain-background-color-hover: var(--c-grey-6);
+    
+    width: var(--icon-button-size);
+    height: var(--icon-button-size);
+    color: var(--icon-button-color);
+    box-shadow: var(--icon-button-box-shadow);
+    border-radius: var(--icon-button-border-radius);
+    background-color: var(--icon-button-background-color);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    flex: none;
+    
+    &:hover,
+    &:focus {
+        --icon-button-color: var(--icon-button-color-hover);
+        --icon-button-background-color: var(--icon-button-background-color-hover);
+    }
+    
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    &--variant-primary {
+        --icon-button-color: var(--icon-button-variant-primary-color);
+        --icon-button-color-hover: var(--icon-button-variant-primary-color-hover);
+        --icon-button-background-color: var(--icon-button-variant-primary-background-color);
+        --icon-button-background-color-hover: var(--icon-button-variant-primary-background-color-hover);
+        --icon-button-box-shadow: var(--icon-button-variant-primary-box-shadow);
+    }
+    
+    &--variant-plain {
+        --icon-button-color: var(--icon-button-variant-plain-color);
+        --icon-button-color-hover: var(--icon-button-variant-plain-color-hover);
+        --icon-button-background-color: var(--icon-button-variant-plain-background-color);
+        --icon-button-background-color-hover: var(--icon-button-variant-plain-background-color-hover);
+    }
+}

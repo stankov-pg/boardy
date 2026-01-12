@@ -1,0 +1,29 @@
+// ==========================================================================
+// Text Input
+// ==========================================================================
+
+.text-input {
+    --text-input-background-color: var(--c-white);
+    --text-input-box-shadow: inset 0px 0px 0px 1px var(--c-grey-5);
+    --text-input-box-shadow-hover: inset 0px 0px 0px 1px var(--c-blue);
+    --text-input-border-radius: .6rem;
+    --text-input-padding: 0 .8rem;
+    --text-input-font-size: 1.4rem;
+    --text-input-height: 3rem;
+    
+    background-color: var(--text-input-background-color);
+    box-shadow: var(--text-input-box-shadow);
+    color: var(--c-base);
+    border-radius: var(--text-input-border-radius);
+    padding: var(--text-input-padding);
+    font-size: var(--text-input-font-size);
+    height: var(--text-input-height);
+    
+    width: 100%;
+    border: none;
+    
+    &:focus-visible,
+    &:hover {
+        box-shadow: var(--text-input-box-shadow-hover);
+    }
+}

@@ -1,0 +1,37 @@
+// ==========================================================================
+// Kanban Board
+// ==========================================================================
+
+.kanban-board {
+    background-color: var(--c-grey-4);
+
+    margin-left: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Kanban Board / Head
+// ==========================================================================
+
+.kanban-board__head {
+    background-color: var(--c-primary);
+    color: var(--c-white);
+
+    padding: 1.6rem 2.4rem;
+}
+
+// Kanban Board / Body
+// ==========================================================================
+
+.kanban-board__body {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    display: flex;
+}
+
+.kanban-board__body-inner {
+    padding: 2.4rem;
+    display: flex;
+}

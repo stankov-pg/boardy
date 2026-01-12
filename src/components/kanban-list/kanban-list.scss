@@ -1,0 +1,112 @@
+// ==========================================================================
+// Kanban List
+// ==========================================================================
+
+.kanban-list {
+    --kanban-list-button-delete-visibility: hidden;
+    --kanban-list-background-color: var(--c-grey);
+    --kanban-list-background-color-entered: var(--kanban-list-background-color);
+    
+    background-color: var(--kanban-list-background-color);
+    box-shadow: var(--container-box-shadow);
+    
+    position: relative;
+    min-width: 272px;
+    width: 272px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: .6rem;
+    
+    &:hover {
+        --kanban-list-button-delete-visibility: visible;
+    }
+    
+    &.is-dragging {
+        opacity: 0.5;
+    }
+    
+    &.is-entered {
+        --kanban-list-background-color: var(--c-grey-6);
+    }
+}
+
+// Kanban List / Head
+// ==========================================================================
+
+.kanban-list__head {
+    background-color: var(--kanban-list-background-color);
+
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 0 1rem;
+    height: 4.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: none;
+}
+
+// Kanban List / Title
+// ==========================================================================
+
+.kanban-list__title {
+    padding: 0.4rem 0.8rem;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border-radius: .4rem;
+
+    &:hover {
+        background-color: var(--c-grey-6);
+    }
+}
+
+// Kanban List / Button Delete
+// ==========================================================================
+
+.kanban-list__button-delete {
+    visibility: var(--kanban-list-button-delete-visibility);
+}
+
+// Kanban List / Body
+// ==========================================================================
+
+.kanban-list__body {
+    padding: 0 1rem;
+    overflow: auto;
+    flex: 1 1 auto;
+}
+
+// Kanban List / Foot
+// ==========================================================================
+
+.kanban-list__foot {
+    background-color: var(--kanban-list-background-color);
+
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 1rem;
+}
+
+// Kanban List / Head + Foot
+// ==========================================================================
+
+.kanban-list__head + .kanban-list__foot {
+    padding-top: 0.4rem;
+}
+
+// Kanban List / Create
+// ==========================================================================
+
+.kanban-list__create {
+    background-color: var(--c-grey);
+    box-shadow: var(--container-box-shadow);
+
+    min-width: 272px;
+    width: 272px;
+    border-radius: .6rem;
+    padding: 1rem;
+}

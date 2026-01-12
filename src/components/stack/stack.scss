@@ -1,0 +1,35 @@
+// ==========================================================================
+// Stack
+// ==========================================================================
+
+.stack {
+    --stack-gap: 10px;
+    --stack-align: flex-start;
+    --stack-justify: flex-start;
+    --stack-wrap: unset;
+    --stack-direction: unset;
+    
+    // stack row
+    --stack-direction-row-direction: row;
+
+    // stack column
+    --stack-direction-column-direction: column;
+    
+    gap: var(--stack-gap);
+    flex-wrap: var(--stack-wrap);
+    align-items: var(--stack-align);
+    flex-direction: var(--stack-direction);
+    justify-content: var(--stack-justify);
+    
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    
+    &--row {
+        --stack-direction: var(--stack-direction-row-direction);
+    }
+    
+    &--column {
+        --stack-direction: var(--stack-direction-column-direction);
+    }
+}
